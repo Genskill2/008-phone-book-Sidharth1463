@@ -1,5 +1,3 @@
-
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -267,30 +265,3 @@ int delete(FILE *db_file, char *name) {
   free_entries(base);
   return deleted;
 }
-
-/*int delete(FILE *db_file, char *name) {
-  entry *p = load_entries(db_file);
-  entry *base = p;
-  entry *prev = NULL;
-  entry *del = NULL ; /* Node to be deleted */
-  int deleted = 0;
-  while (p!=NULL) {
-    if (strcmp(p->name, name) == 0) {
-      /* Matching node found. Delete it from the linked list.
-         Deletion from a linked list like this
-   
-             p0 -> p1 -> p2
-         
-         means we have to make p0->next point directly to p2. The p1
-         "node" is removed and free'd.
-         
-         If the node to be deleted is p0, it's a special case. 
-      */
-
-      /* TBD */
-    }
-  }
-  ;
-  free_entries(base);
-  return deleted;
-}*/
